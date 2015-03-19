@@ -1,8 +1,7 @@
 (function () {
     "use strict";
-    angular.module('app', [
+    var app = angular.module('app', [
         'app.controllers',
-        'app.directives',
         'app.services',
         'ngRoute'
     ]);
