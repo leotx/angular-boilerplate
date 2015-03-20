@@ -1,0 +1,53 @@
+.ui.transparent.menu {
+    opacity: 0.95;
+}
+
+#example.pushable.left.overlay .fixed.launch.button {
+    transform: translate3d(0, 0, 0);
+}
+
+#example.pushable.overlay.left.pushed .fixed.launch.button {
+    transform: translate3d(260px, 0, 0);
+}
+
+#example .fixed.launch.button {
+    position: fixed;
+    top: 63px;
+    left: -1px;
+
+    width: 55px;
+    height: auto;
+    white-space: nowrap;
+    overflow: hidden;
+    -webkit-transition: 0.3s width ease,
+    0.5s transform ease;
+    -moz-transition: 0.3s width ease,
+    0.5s transform ease;
+    -o-transition: 0.3s width ease,
+    0.5s transform ease;
+    -ms-transition: 0.3s width ease,
+    0.5s transform ease;
+    transition: 0.3s width ease,
+    0.5s transform ease;
+}
+
+#example .fixed.launch.button .text {
+    position: absolute;
+    white-space: nowrap;
+    top: auto;
+    left: 54px;
+    opacity: 0;
+    -webkit-transition: 0.3s opacity 0.3s;
+    -moz-transition: 0.3s opacity 0.3s;
+    -o-transition: 0.3s opacity 0.3s;
+    -ms-transition: 0.3s opacity 0.3s;
+    transition: 0.3s opacity 0.3s;
+}
+
+#example .fixed.launch.button:hover {
+    width: 130px;
+}
+
+#example .fixed.launch.button:hover .text {
+    opacity: 1;
+}

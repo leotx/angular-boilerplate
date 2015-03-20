@@ -72,6 +72,7 @@ gulp.task('inject', function () {
         'dist/lib/angular-resource/angular-resource.min.js',
         'dist/lib/semantic-ui/dist/semantic.min.js',
         'dist/lib/semantic-ui/dist/semantic.min.css',
+        injectMode + '/scripts/app.js',
         injectMode + '/scripts/**/*.js',
         injectMode + '/styles/**/*.css'], {read: false});
 
@@ -87,4 +88,4 @@ gulp.task('server-inject', function(){
 gulp.task('assets', ['css', 'js', 'template']);
 gulp.task('default', ['assets', 'watch-mode']);
 gulp.task('server', ['default', 'server-inject', 'inject', 'connect']);
-gulp.task('dev-server', ['inject', 'connect']);
+gulp.task('dev-server', ['default', 'inject', 'connect']);
