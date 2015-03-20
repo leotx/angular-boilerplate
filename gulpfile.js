@@ -5,10 +5,12 @@ var uglify = require('gulp-uglify');
 var minifyCSS = require('gulp-minify-css');
 var htmlmin = require('gulp-htmlmin');
 var connect = require('gulp-connect');
+var inject = require('gulp-inject');
 
 var WATCH_MODE = 'watch';
 var RUN_MODE = 'run';
 var mode = RUN_MODE;
+var injectMode = 'src'
 
 gulp.task('js', function(){
   return gulp.src('src/scripts/**/*.js')
@@ -29,7 +31,7 @@ gulp.task('template', function() {
 gulp.task('css', function() {
   var cssTask = gulp.src('src/styles/**/*.css');
   cssTask.pipe(minifyCSS());
-  cssTask.pipe(gulp.dest('dist/css'))
+  cssTask.pipe(gulp.dest('dist/styles'))
     .pipe(connect.reload());
 });
 
@@ -62,6 +64,27 @@ gulp.task('watch-mode', function() {
   htmlWatcher.on('change', changeNotification);
 });
 
+gulp.task('inject', function () {
+    var target = gulp.src('index.html');
+    var sources = gulp.src(['dist/lib/jquery/dist/jquery.min.js',
+        'dist/lib/angular/angular.min.js',
+        'dist/lib/angular-route/angular-route.min.js',
+        'dist/lib/angular-resource/angular-resource.min.js',
+        'dist/lib/semantic-ui/dist/semantic.min.js',
+        'dist/lib/semantic-ui/dist/semantic.min.css',
+        injectMode + '/scripts/**/*.js',
+        injectMode + '/styles/**/*.css'], {read: false});
+
+    return target.pipe(inject(sources))
+        .pipe(gulp.dest(''));
+});
+
+
+gulp.task('server-inject', function(){
+    injectMode = 'dist'
+});
+
 gulp.task('assets', ['css', 'js', 'template']);
-gulp.task('default', ['watch-mode', 'assets']);
-gulp.task('server', ['connect', 'default']);
+gulp.task('default', ['assets', 'watch-mode']);
+gulp.task('server', ['default', 'server-inject', 'inject', 'connect']);
+gulp.task('dev-server', ['inject', 'connect']);

@@ -6,15 +6,24 @@
 
     <title>Test</title>
 
-    <link rel="stylesheet" href="dist/css/main.css"/>
-    <link rel="stylesheet" href="dist/lib/semantic-ui/dist/semantic.min.css"/>
+    <!-- inject:css -->
+    <link rel="stylesheet" href="/dist/lib/semantic-ui/dist/semantic.min.css">
+    <link rel="stylesheet" href="/src/styles/main.css">
+    <!-- endinject -->
 
-    <script src="dist/lib/jquery/dist/jquery.min.js"></script>
-    <script src="dist/lib/angular/angular.min.js"></script>
-    <script src="dist/lib/angular-route/angular-route.min.js"></script>
-    <script src="dist/lib/angular-resource/angular-resource.min.js"></script>
-    <script src="dist/scripts/all.min.js"></script>
-    <script src="dist/lib/semantic-ui/dist/semantic.min.js"></script>
+    <!-- inject:js -->
+    <script src="/dist/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/dist/lib/angular/angular.min.js"></script>
+    <script src="/dist/lib/angular-route/angular-route.min.js"></script>
+    <script src="/dist/lib/angular-resource/angular-resource.min.js"></script>
+    <script src="/dist/lib/semantic-ui/dist/semantic.min.js"></script>
+    <script src="/src/scripts/app.js"></script>
+    <script src="/src/scripts/routes.js"></script>
+    <script src="/src/scripts/controllers/controllers.js"></script>
+    <script src="/src/scripts/controllers/HomeController.js"></script>
+    <script src="/src/scripts/services/HomeService.js"></script>
+    <script src="/src/scripts/services/services.js"></script>
+    <!-- endinject -->
 </head>
 <body>
 <div ng-view></div>
