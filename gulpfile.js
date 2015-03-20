@@ -6,6 +6,7 @@ var minifyCSS = require('gulp-minify-css');
 var htmlmin = require('gulp-htmlmin');
 var connect = require('gulp-connect');
 var inject = require('gulp-inject');
+var imagemin = require('gulp-imagemin');
 
 var WATCH_MODE = 'watch';
 var RUN_MODE = 'run';
@@ -35,6 +36,13 @@ gulp.task('css', function() {
     .pipe(connect.reload());
 });
 
+gulp.task('image', function () {
+  gulp.src('src/images/**.*')
+    .pipe(imagemin())
+    .pipe(gulp.dest('dist/images'))
+    .pipe(connect.reload());
+});
+
 gulp.task('connect', function() {
   if (mode === WATCH_MODE) {
     gulp.watch(['index.html'], function() {
@@ -53,6 +61,7 @@ gulp.task('watch-mode', function() {
 
   var jsWatcher = gulp.watch('src/scripts/**/*.js', ['js']),
     cssWatcher = gulp.watch('src/styles/**/*.css', ['css']),
+    imageWatcher = gulp.watch('src/images/**/*', ['image']),
     htmlWatcher = gulp.watch('src/templates/**/*.html', ['template']);
 
   function changeNotification(event) {
@@ -61,6 +70,7 @@ gulp.task('watch-mode', function() {
 
   jsWatcher.on('change', changeNotification);
   cssWatcher.on('change', changeNotification);
+  imageWatcher.on('change', changeNotification);
   htmlWatcher.on('change', changeNotification);
 });
 
@@ -85,7 +95,7 @@ gulp.task('server-inject', function(){
     injectMode = 'dist'
 });
 
-gulp.task('assets', ['css', 'js', 'template']);
+gulp.task('assets', ['css', 'js', 'template', 'image']);
 gulp.task('default', ['assets', 'watch-mode']);
 gulp.task('server', ['default', 'server-inject', 'inject', 'connect']);
-gulp.task('dev-server', ['default', 'inject', 'connect']);
+gulp.task('dev', ['default', 'inject', 'connect']);

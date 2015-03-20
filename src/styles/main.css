@@ -1,22 +1,22 @@
-#toc {
+.dx-menu {
     white-space: nowrap;
-    width:40px;
+    width:40px !important;
     height: 100%;
-    -webkit-transition: width 1s; /* For Safari 3.1 to 6.0 */
+    -webkit-transition: width 1s;
     transition: width 1s;
     border-radius: 0 !important;
 }
 
-#toc:hover {
-    width:200px;
+.dx-menu:hover {
+    width:200px !important;
 }
 
 .text {
-    opacity: 0;
+    opacity: 0 !important;
     transition: ease-in-out opacity 0.25s;
 }
 
-#toc:hover .text {
+.dx-menu:hover .text {
     transition: ease-in-out opacity 0.25s 0.1s;
-    opacity: 1;
+    opacity: 1 !important;
 }

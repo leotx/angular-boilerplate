@@ -7,7 +7,7 @@
                 controller: 'HomeController'
             })
             .otherwise({
-                redirectTo: '/'
+                redirectTo: '/home'
             });
     }
     angular.module('app').config(['$routeProvider', routesConfig]);
