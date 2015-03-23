@@ -5,8 +5,10 @@
         </a>
         <span class="text"><b>Example!</b></span>
     </div>
-    <div class="item">
-        <i class="home icon"></i><span class="text">Home</span>
+    <a class="item" ng-click="showMenu = !showMenu">
+        <i class="home icon" ></i><span class="text">Home</span>
+    </a>
+    <div class="item" ng-show="showMenu">
         <div class="menu">
             <a class="item"><span class="text">Search</span></a>
             <a class="item"><span class="text">Add</span></a>

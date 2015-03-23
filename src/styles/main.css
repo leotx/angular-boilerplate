@@ -26,9 +26,9 @@
 .container {
     position: relative;
     width: 700px;
-    margin: 0px auto;
+    margin: 0 auto;
 }
 
 .dx-header {
-    height: 57px;
+    height: 37px;
 }
