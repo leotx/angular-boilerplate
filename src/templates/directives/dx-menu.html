@@ -5,17 +5,17 @@
         </a>
         <span class="text title"><b>Example!</b></span>
     </div>
+
     <a class="item" ng-click="showMenu = !showMenu">
         <i class="home icon"></i><span class="text">Home</span>
         <i class="text" ng-class="{'chevron down icon': showMenu, 'chevron right icon': !showMenu}"></i>
     </a>
-    <div class="item" ng-show="showMenu">
-        <div class="menu">
-            <a class="item"><span class="text">Search</span></a>
-            <a class="item"><span class="text">Add</span></a>
-            <a class="item"><span class="text">Remove</span></a>
-        </div>
+    <div class="menu" ng-class="{'expand-animate': showMenu, 'collapse-animate': !showMenu}">
+        <a class="item"><span class="text">Search</span></a>
+        <a class="item"><span class="text">Add</span></a>
+        <a class="item"><span class="text">Remove</span></a>
     </div>
+
     <a class="item">
         <i class="grid layout icon"></i><span class="text">Browse</span>
     </a>

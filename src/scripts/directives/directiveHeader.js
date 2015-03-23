@@ -7,14 +7,15 @@
                 templateUrl: "dist/templates/directives/dx-header.html",
                 link :function ($scope) {
                     $scope.user = {
-                        ref : '#',
+                        ref : '#user',
                         imgUrl : "dist/images/user.jpg",
                         name : "Chuck Norris",
                         company : "Acme Unlimited"
                     };
 
                     $scope.notifications = {
-                        count : 13
+                        count : 13,
+                        ref : '#notifications'
                     };
                 }
             };

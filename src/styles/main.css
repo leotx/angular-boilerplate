@@ -102,3 +102,15 @@
     height: auto !important;
     margin: 0 auto -30px;
 }
+
+.expand-animate{
+    max-height: 200px;
+    transition: ease-in max-height 1s;
+    overflow: hidden;
+}
+
+.collapse-animate{
+    max-height : 0;
+    transition: ease-out max-height 1s;
+    overflow: hidden;
+}
