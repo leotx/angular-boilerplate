@@ -94,10 +94,8 @@
 }
 
 .well {
-    left: 60px;
-    margin-top: 150px;
-    margin-bottom: 100px;
-    width: 95%;
+    padding: 150px 60px 100px;
+    width: 100%;
 }
 
 .wrapper {
