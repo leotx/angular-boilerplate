@@ -5,6 +5,8 @@
     -webkit-transition: width 1s;
     transition: width 1s;
     border-radius: 0 !important;
+    z-index: 102;
+    position: relative;
 }
 
 .dx-menu:hover {
@@ -19,4 +21,14 @@
 .dx-menu:hover .text {
     transition: ease-in-out opacity 0.25s 0.1s;
     opacity: 1 !important;
+}
+
+.container {
+    position: relative;
+    width: 700px;
+    margin: 0px auto;
+}
+
+.dx-header {
+    height: 57px;
 }

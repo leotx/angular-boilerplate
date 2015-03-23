@@ -2,11 +2,11 @@
     "use strict";
 
     angular.module("app.directives")
-        .directive('directiveMenu', function () {
+        .directive('directiveHeader', function () {
             return {
-                templateUrl: "dist/templates/directives/dx-menu.html",
+                templateUrl: "dist/templates/directives/dx-header.html",
                 link :function ($scope) {
-                    $scope.Title = "Teste";
+
                 }
             };
         });
