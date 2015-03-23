@@ -45,3 +45,21 @@
     right:0px;
     margin-bottom:0px;
 }
+
+.dx-breadcrumb{
+    position:fixed;
+    height:50px;
+    top:38px;
+    left:250px;
+    right:0px;
+    margin-bottom:0px;
+}
+
+.dx-breadcrumb .title{
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+
+.dx-breadcrumb .inline{
+    display: inline-block;
+}
