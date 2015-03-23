@@ -1,5 +1,20 @@
 <div class="ui fixed menu dx-header">
     <div class="container">
+        <div class="right menu">
+            <div class="vertically fitted borderless item">
 
+                <img class="user-icon icon image" alt="" src="{{user.imgUrl}}">
+                <span class = "title">
+                    <a href="{{user.ref}}">{{user.name}}</a>
+                    <i>/ {{user.company}}</i>
+                </span>
+            </div>
+
+            <a class="ui item">
+                <i class="alarm link icon">
+                </i>
+                <div class="ui label badge">{{notifications.count}}</div>
+            </a>
+        </div>
     </div>
 </div>

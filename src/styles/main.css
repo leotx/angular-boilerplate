@@ -45,3 +45,28 @@
     right:0px;
     margin-bottom:0px;
 }
+
+.user-icon{
+    width: 24px;
+    height: 24px;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    vertical-align: inherit;
+    margin-right: 4px;
+}
+
+.user-name{
+    font-weight: 200;
+    color : grey;
+    vertical-align: middle;
+}
+
+.ui.label.badge {
+    background-color: rgba(53, 188, 177, 0.8) !important;
+    color : white;
+    font-size: 8px;
+    padding: 0.3em 0.8em;
+    vertical-align: super;
+    margin: 0 0 0 -12px !important;
+}
