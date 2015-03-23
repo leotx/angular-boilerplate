@@ -3,10 +3,11 @@
         <a class="ui logo icon image" href="/">
             <img src="dist/images/logo.png" height="48" width="35">
         </a>
-        <span class="text"><b>Example!</b></span>
+        <span class="text title"><b>Example!</b></span>
     </div>
     <a class="item" ng-click="showMenu = !showMenu">
-        <i class="home icon" ></i><span class="text">Home</span>
+        <i class="home icon"></i><span class="text">Home</span>
+        <i class="text" ng-class="{'chevron down icon': showMenu, 'chevron right icon': !showMenu}"></i>
     </a>
     <div class="item" ng-show="showMenu">
         <div class="menu">
