@@ -15,7 +15,7 @@
 
                     $scope.notifications = {
                         count : 13
-                    }
+                    };
                 }
             };
         });

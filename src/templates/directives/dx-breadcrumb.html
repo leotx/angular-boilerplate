@@ -1,10 +1,12 @@
-<div class="ui fixed breadcrumb dx-breadcrumb">
-    <div class="title">
-        <label>{{CurrentBreadcrumb.title}}</label>
+<div class="ui fixed breadcrumb">
+    <div class="dx-breadcrumb">
+        <div class="title">
+            <label>{{CurrentBreadcrumb.title}}</label>
+        </div>
+        <div ng-repeat="breadcrumb in Breadcrumbs" class="inline">
+            <a class="section" href="{{breadcrumb.page}}">{{breadcrumb.title}}</a>
+            <div class="divider"> / </div>
+        </div>
+        <div class="active section">&nbsp;{{CurrentBreadcrumb.title}}</div>
     </div>
-    <div ng-repeat="breadcrumb in Breadcrumbs" class="inline">
-        <a class="section" href="{{breadcrumb.page}}">{{breadcrumb.title}}</a>
-        <div class="divider"> / </div>
-    </div>
-    <div class="active section">&nbsp;{{CurrentBreadcrumb.title}}</div>
 </div>
