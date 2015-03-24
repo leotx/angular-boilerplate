@@ -12,8 +12,7 @@
             }
         };
     }
-
-    // switch lines conforming your needs: Mocked or Real
-    // angular.module("app.services").factory("terceiroService", ['terceiroRepository', service]); // real
-    angular.module("app.services").factory("terceiroService", ['terceiroRepository', '$interface', service]); // mocked
+    
+    const USE_MOCK = true; // TODO: make global
+    angular.module("app.services").factory("terceiroService", [USE_MOCK ? 'terceiroRepositoryMock' : 'terceiroRepository', '$interface', service]);
 })();
