@@ -114,3 +114,13 @@
     transition: ease-out max-height 1s;
     overflow: hidden;
 }
+
+ul.click {
+    cursor: pointer;
+    margin-bottom: 0px !important;
+    margin-top: 0px !important;
+}
+
+li.sub-menu{
+    margin-top: 0px !important;
+}
