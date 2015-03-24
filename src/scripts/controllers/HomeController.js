@@ -28,6 +28,50 @@
             firstName: 'Sue',
             lastName: 'Banter',
             age: 21
+        },{
+            firstName: 'Sue',
+            lastName: 'Banter',
+            age: 21
+        },{
+            firstName: 'Sue',
+            lastName: 'Banter',
+            age: 21
+        },{
+            firstName: 'Sue',
+            lastName: 'Banter',
+            age: 21
+        },{
+            firstName: 'Sue',
+            lastName: 'Banter',
+            age: 21
+        },{
+            firstName: 'Sue',
+            lastName: 'Banter',
+            age: 21
+        },{
+            firstName: 'Sue',
+            lastName: 'Banter',
+            age: 21
+        },{
+            firstName: 'Sue',
+            lastName: 'Banter',
+            age: 21
+        },{
+            firstName: 'Sue',
+            lastName: 'Banter',
+            age: 21
+        },{
+            firstName: 'Sue',
+            lastName: 'Banter',
+            age: 21
+        },{
+            firstName: 'Sue',
+            lastName: 'Banter',
+            age: 21
+        },{
+            firstName: 'Sue',
+            lastName: 'Banter',
+            age: 21
         }];
     }
     angular.module("app.controllers").controller("HomeController", ["$scope", homeController]);

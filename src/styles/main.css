@@ -121,6 +121,16 @@ ul.click {
     margin-top: 0px !important;
 }
 
+ul.pagination{
+    padding-left: 0px !important;
+    cursor: pointer;
+}
+
 li.sub-menu{
     margin-top: 0px !important;
+}
+
+li.active-page{
+    color: #d0d0d0 !important;
+    font-weight: bold !important;
 }
