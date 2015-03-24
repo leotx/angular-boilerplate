@@ -13,13 +13,13 @@
                             showSubMenu: false,
                             subMenus: [
                                 {
-                                    title: "Home",
+                                    title: "Help",
                                     route: '#/home'
                                 }
                             ]
                         },
                         {
-                            title: "BackOffice",
+                            title: "Browse",
                             icon: "grid layout",
                             showSubMenu: false,
                             route: '/'
