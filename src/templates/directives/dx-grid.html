@@ -7,7 +7,7 @@
         <thead>
         <tr>
             <th ng-repeat="column in columns">
-                <a ng-click="changeSorting(column.value)">
+                <a href ng-click="changeSorting(column.value)">
                     {{column.name}}
                     <i ng-show="Sort.column == '{{column.value}}'"
                        ng-class="{'caret up icon': !Sort.descending, 'caret down icon': Sort.descending}">
