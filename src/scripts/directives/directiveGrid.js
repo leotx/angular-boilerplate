@@ -9,6 +9,8 @@
                     columns: '='
                 },
                 link: function (scope) {
+                    scope.searchKeyword = undefined;
+
                     scope.Sort = {
                         column: '',
                         descending: false

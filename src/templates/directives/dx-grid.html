@@ -1,4 +1,8 @@
 <form class="ui form well">
+    <div class="ui icon input">
+        <input type="text" placeholder="Search..." ng-model="searchKeyword">
+        <i class="circular search icon"></i>
+    </div>
     <table class="ui celled table">
         <thead>
         <tr>
@@ -13,7 +17,7 @@
         </tr>
         </thead>
         <tbody>
-        <tr ng-repeat="data in data|orderBy:Sort.column:Sort.descending">
+        <tr ng-repeat="data in data | filter: searchKeyword | orderBy:Sort.column:Sort.descending">
             <td ng-repeat="column in $parent.columns" ng-bind="data.{{column.value}}"></td>
         </tr>
         </tbody>

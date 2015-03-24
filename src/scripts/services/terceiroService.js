@@ -13,6 +13,6 @@
         };
     }
     
-    const USE_MOCK = true; // TODO: make global
+    var USE_MOCK = true; // TODO: make global
     angular.module("app.services").factory("terceiroService", [USE_MOCK ? 'terceiroRepositoryMock' : 'terceiroRepository', '$interface', service]);
 })();

@@ -4,7 +4,7 @@
         $routeProvider
             .when('/home', {
                 templateUrl: 'dist/templates/home.html',
-                controller: 'homeController'
+                controller: 'HomeController'
             })
             .when('/terceiros', {
                 templateUrl: 'dist/templates/terceiros.html',
