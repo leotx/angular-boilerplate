@@ -30,7 +30,7 @@
                         var menu = $scope.Menus[index];
 
                         if (menu.subMenus && menu.subMenus.length > 0) {
-                            menu.showSubMenu = !menu.showSubMenu
+                            menu.showSubMenu = !menu.showSubMenu;
                         } else {
                             $location.url(menu.route);
                         }

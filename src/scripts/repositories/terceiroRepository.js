@@ -4,11 +4,11 @@
     var repository = function ($http) {
         return {
             getAll: function () {
-                alert("Mock!");
+                alert("Real!");
             }
         };
     };
 
-    angular.module("app.repository").factory("terceiroRepositoryMock", ['$http', repository]);
+    angular.module("app.repository").factory("terceiroRepository", ['$http', repository]);
 
 })();
