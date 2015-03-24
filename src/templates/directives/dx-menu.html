@@ -5,21 +5,12 @@
         </a>
         <span class="text title"><b>Example!</b></span>
     </div>
-
-    <a class="item" ng-click="showMenu = !showMenu">
-        <i class="home icon"></i><span class="text">Home</span>
-        <i class="text" ng-class="{'chevron down icon': showMenu, 'chevron right icon': !showMenu}"></i>
-    </a>
-    <div class="menu" ng-class="{'expand-animate': showMenu, 'collapse-animate': !showMenu}">
-        <a class="item"><span class="text">Search</span></a>
-        <a class="item"><span class="text">Add</span></a>
-        <a class="item"><span class="text">Remove</span></a>
-    </div>
-
-    <a class="item">
-        <i class="grid layout icon"></i><span class="text">Browse</span>
-    </a>
-    <a class="item">
-        <i class="mail icon"></i><span class="text">Messages</span>
-    </a>
+    <ul ng-repeat="menu in Menus" class="item click" ng-click="menuRedirect($index)">
+        <i class="{{menu.icon}} icon"></i><span class="text">{{menu.title}}</span>
+        <i class="text" ng-if="menu.subMenus.length > 0" ng-class="{'caret down icon': menu.showSubMenu, 'caret right icon': !menu.showSubMenu}"></i>
+        <li class="menu sub-menu" ng-if="menu.subMenus.length > 0" ng-repeat="submenu in menu.subMenus"
+            ng-class="{'expand-animate': menu.showSubMenu, 'collapse-animate': !menu.showSubMenu}">
+            <a class="item" href="{{submenu.route}}"><span class="text">{{submenu.title}}</span></a>
+        </li>
+    </ul>
 </div>
