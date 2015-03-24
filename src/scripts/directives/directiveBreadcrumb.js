@@ -18,14 +18,17 @@
                         return fullPath == item.page;
                     });
 
-                    $scope.Breadcrumbs = breadcrumb.filter(function(item){
-                        var itemRootPath =  item.page.split('/')[1];
-                        if (item.page == currentPage[0].page){
-                            $scope.CurrentBreadcrumb = item;
-                        }
-                        item.page = '#' +item.page;
-                        return rootPath == itemRootPath && item.order < currentPage[0].order;
-                    });
+                    if (currentPage && currentPage.length > 0)
+                    {
+                        $scope.Breadcrumbs = breadcrumb.filter(function(item){
+                            var itemRootPath =  item.page.split('/')[1];
+                            if (item.page == currentPage[0].page){
+                                $scope.CurrentBreadcrumb = item;
+                            }
+                            item.page = '#' +item.page;
+                            return rootPath == itemRootPath && item.order < currentPage[0].order;
+                        });
+                    }
                 }
             };
         }]);

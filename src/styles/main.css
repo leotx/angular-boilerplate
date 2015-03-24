@@ -148,3 +148,112 @@ li.active-page{
     margin-left: 30px !important;
     height: 40px !important;
 }
+
+hr.faded {
+    clear: both;
+    float: none;
+    width: 100%;
+    height: 1px;
+    margin-top: 3em;
+    border: none;
+    background: #ddd;
+    background-image: -webkit-gradient( linear, left bottom, right bottom, color-stop(0, rgb(255,255,255)), color-stop(0.1, rgb(221,221,221)), color-stop(0.9, rgb(221,221,221)), color-stop(1, rgb(255,255,255)) );
+    background-image: -moz-linear-gradient(left center, rgb(255,255,255) 0%, rgb(221,221,221) 10%, rgb(221,221,221) 90%, rgb(255,255,255) 100%);
+}
+
+.wizard-step-indicator {
+    text-align: center;
+}
+
+    .wizard-step-indicator li {
+        display: inline;
+        float: left;
+    }
+
+        .wizard-step-indicator li.current div.step-marker {
+            background-color: #02AF55;
+        }
+
+        .wizard-step-indicator li.done div.step-marker {
+            background-color: #808080;
+        }
+
+        .wizard-step-indicator li.editing div.step-marker {
+            background-color: #d90606;
+        }
+
+        .wizard-step-indicator li a {
+            text-decoration: none;
+        }
+
+        .wizard-step-indicator li div.step-marker {
+            position: absolute;
+            top: 186px;
+            width: 14px;
+            height: 14px;
+            background-color: #e6e6e6;
+            border-radius: 100%;
+            content: '';
+            display: inline-block;
+            margin-left: -7px;
+        }
+
+        .wizard-step-indicator li.steps-1 {
+            width: 100%;
+        }
+
+        .wizard-step-indicator li.steps-2 {
+            width: 50%;
+        }
+
+        .wizard-step-indicator li.steps-3 {
+            width: 33.33333%;
+        }
+
+        .wizard-step-indicator li.steps-4 {
+            width: 25%;
+        }
+
+        .wizard-step-indicator li.steps-5 {
+            width: 20%;
+        }
+
+        .wizard-step-indicator li.steps-6 {
+            width: 16.66666%;
+        }
+
+        .wizard-step-indicator li.steps-7 {
+            width: 14.28571%;
+        }
+
+        .wizard-step-indicator li.steps-8 {
+            width: 12.5%;
+        }
+
+        .wizard-step-indicator li.steps-9 {
+            width: 11.11111%;
+        }
+
+        .wizard-step-indicator li.steps-10 {
+            width: 10%;
+        }
+
+        .wizard-step-indicator li.steps-11 {
+            width: 9.0909%;
+        }
+
+        .wizard-step-indicator li.steps-12 {
+            width: 8.33333%;
+        }
+
+        .wizard-step-indicator li.steps-13 {
+            width: 7.69230%;
+        }
+
+        .wizard-step-indicator li.steps-14 {
+            width: 7.14285%;
+        }
+
+        .wizard-step-indicator li.steps-15 {
+            width: 6.66666%;
+        }

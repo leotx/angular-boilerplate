@@ -40,7 +40,7 @@
 
         $scope.addTest = function(){
             console.log('Working!');
-        }
+        };
     }
     angular.module("app.controllers").controller("HomeController", ["$scope", homeController]);
 })();

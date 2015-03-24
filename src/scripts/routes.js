@@ -3,12 +3,12 @@
     function routesConfig($routeProvider) {
         $routeProvider
             .when('/home', {
-                templateUrl: 'dist/templates/home.html',
+                templateUrl: 'dist/templates/views/home/home.html',
                 controller: 'HomeController'
             })
-            .when('/terceiros', {
-                templateUrl: 'dist/templates/terceiros.html',
-                controller: 'terceiroController'
+            .when('/wizard', {
+                templateUrl: 'dist/templates/views/wizard/wizard.html',
+                controller: 'WizardController'
             })
             .otherwise({
                 redirectTo: '/home'
