@@ -27,8 +27,9 @@
                 <div>
                     <div class="ui borderless pagination menu">
                         <ul class="pagination">
-                            <li class="item" ng-class="{disabled: currentPage == 0}">
-                                <a ng-click="prevPage()"><i class="left arrow icon"></i>Previous</a>
+                            <li class="item">
+                                <a ng-class="{'disabled item-disabled': currentPage == 0}"
+                                   ng-click="prevPage()"><i class="left arrow icon"></i>Previous</a>
                             </li>
 
                             <li class="item" ng-repeat="n in range(pagedItems.length, currentPage, currentPage + gap) "
@@ -37,8 +38,9 @@
                                 {{n + 1}}
                             </li>
 
-                            <li class="item" ng-class="{disabled: (currentPage) == pagedItems.length - 1}">
-                                <a ng-click="nextPage()">Next <i class="icon right arrow"></i></a>
+                            <li class="item">
+                                <a ng-class="{'disabled item-disabled': (currentPage) == pagedItems.length - 1}"
+                                   ng-click="nextPage()">Next <i class="icon right arrow"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -47,8 +49,8 @@
                         <option value="20">20</option>
                         <option value="30">30</option>
                     </select>
-                    <div class="ui right floated small primary labeled icon button">
-                        <i class="user icon"></i> Add User
+                    <div ng-if="add" ng-click="add()" class="ui right floated small labeled icon button">
+                        <i class="plus icon"></i> Add
                     </div>
                 </div>
             </th>

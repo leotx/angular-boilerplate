@@ -6,7 +6,8 @@
                 templateUrl: "dist/templates/directives/dx-grid.html",
                 scope:    {
                     data:   '=',
-                    columns: '='
+                    columns: '=',
+                    add: '='
                 },
                 link: function (scope) {
                     scope.searchKeyword = undefined;
