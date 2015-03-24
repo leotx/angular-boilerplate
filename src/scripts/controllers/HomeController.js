@@ -19,59 +19,23 @@
         $scope.Data = [{
             firstName: 'John',
             lastName: 'Doe',
-            age: 30
+            age: 22
         },{
-            firstName: 'Frank',
-            lastName: 'Burns',
-            age: 54
+            firstName: 'Jane',
+            lastName: 'Roe',
+            age: 23
         },{
-            firstName: 'Sue',
-            lastName: 'Banter',
-            age: 21
+            firstName: 'Bart',
+            lastName: 'Simpson',
+            age: 59
         },{
-            firstName: 'Sue',
-            lastName: 'Banter',
-            age: 21
+            firstName: 'Chuck',
+            lastName: 'Norris',
+            age: 70
         },{
-            firstName: 'Sue',
-            lastName: 'Banter',
-            age: 21
-        },{
-            firstName: 'Sue',
-            lastName: 'Banter',
-            age: 21
-        },{
-            firstName: 'Sue',
-            lastName: 'Banter',
-            age: 21
-        },{
-            firstName: 'Sue',
-            lastName: 'Banter',
-            age: 21
-        },{
-            firstName: 'Sue',
-            lastName: 'Banter',
-            age: 21
-        },{
-            firstName: 'Sue',
-            lastName: 'Banter',
-            age: 21
-        },{
-            firstName: 'Sue',
-            lastName: 'Banter',
-            age: 21
-        },{
-            firstName: 'Sue',
-            lastName: 'Banter',
-            age: 21
-        },{
-            firstName: 'Sue',
-            lastName: 'Banter',
-            age: 21
-        },{
-            firstName: 'Sue',
-            lastName: 'Banter',
-            age: 21
+            firstName: 'Homer',
+            lastName: 'Simpson',
+            age: 13
         }];
 
         $scope.addTest = function(){
