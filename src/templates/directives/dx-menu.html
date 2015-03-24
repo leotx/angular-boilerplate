@@ -3,14 +3,14 @@
         <a class="ui logo icon image" href="/">
             <img src="dist/images/logo.png" height="48" width="35">
         </a>
-        <span class="text title"><b>Example!</b></span>
+        <span class="text-menu title"><b>Example!</b></span>
     </div>
     <ul ng-repeat="menu in Menus" class="item click" ng-click="menuRedirect($index)">
-        <i class="{{menu.icon}} icon"></i><span class="text">{{menu.title}}</span>
-        <i class="text" ng-if="menu.subMenus.length > 0" ng-class="{'caret down icon': menu.showSubMenu, 'caret right icon': !menu.showSubMenu}"></i>
+        <i class="{{menu.icon}} icon"></i><span class="text-menu">{{menu.title}}</span>
+        <i class="text-menu" ng-if="menu.subMenus.length > 0" ng-class="{'caret down icon': menu.showSubMenu, 'caret right icon': !menu.showSubMenu}"></i>
         <li class="menu sub-menu" ng-if="menu.subMenus.length > 0" ng-repeat="submenu in menu.subMenus"
             ng-class="{'expand-animate': menu.showSubMenu, 'collapse-animate': !menu.showSubMenu}">
-            <a class="item" href="{{submenu.route}}"><span class="text">{{submenu.title}}</span></a>
+            <a class="item" href="{{submenu.route}}"><span class="text-menu">{{submenu.title}}</span></a>
         </li>
     </ul>
 </div>

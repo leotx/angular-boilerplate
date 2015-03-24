@@ -24,25 +24,32 @@
         <tfoot class="full-width">
         <tr>
             <th colspan="{{columns.length}}">
-                <div class="ui borderless pagination menu">
-                    <ul class="pagination">
-                        <li class="item" ng-class="{disabled: currentPage == 0}">
-                            <i ng-click="prevPage()" class="left arrow icon"></i> Previous
-                        </li>
+                <div>
+                    <div class="ui borderless pagination menu">
+                        <ul class="pagination">
+                            <li class="item" ng-class="{disabled: currentPage == 0}">
+                                <a ng-click="prevPage()"><i class="left arrow icon"></i>Previous</a>
+                            </li>
 
-                        <li class="item" ng-repeat="n in range(pagedItems.length, currentPage, currentPage + gap) "
-                            ng-class="{'active-page': n == currentPage}"
-                            ng-click="setPage()">
-                            {{n + 1}}
-                        </li>
+                            <li class="item" ng-repeat="n in range(pagedItems.length, currentPage, currentPage + gap) "
+                                ng-class="{'active-page': n == currentPage}"
+                                ng-click="setPage()">
+                                {{n + 1}}
+                            </li>
 
-                        <li class="item" ng-class="{disabled: (currentPage) == pagedItems.length - 1}">
-                            Next <i ng-click="nextPage()" class="icon right arrow"></i>
-                        </li>
-                    </ul>
-                </div>
-                <div class="ui right floated small primary labeled icon button">
-                    <i class="user icon"></i> Add User
+                            <li class="item" ng-class="{disabled: (currentPage) == pagedItems.length - 1}">
+                                <a ng-click="nextPage()">Next <i class="icon right arrow"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <select class="ui dropdown item-page" ng-model="itemsPerPage" ng-change="search()">
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="30">30</option>
+                    </select>
+                    <div class="ui right floated small primary labeled icon button">
+                        <i class="user icon"></i> Add User
+                    </div>
                 </div>
             </th>
         </tr>

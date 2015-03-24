@@ -13,17 +13,17 @@
     width:200px !important;
 }
 
-.text {
+.text-menu {
     opacity: 0 !important;
     transition: ease-in-out opacity 0.25s;
 }
 
-.dx-menu:hover .text {
+.dx-menu:hover .text-menu {
     transition: ease-in-out opacity 0.25s 0.1s;
     opacity: 1 !important;
 }
 
-.text.title  {
+.text-menu.title  {
     padding-left: 5px;
 }
 
@@ -133,4 +133,9 @@ li.sub-menu{
 li.active-page{
     color: #d0d0d0 !important;
     font-weight: bold !important;
+}
+
+.dropdown.item-page {
+    margin-left: 30px !important;
+    height: 40px !important;
 }

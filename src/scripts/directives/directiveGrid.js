@@ -13,13 +13,15 @@
                     scope.gap = 5;
                     scope.filteredItems = [];
                     scope.groupedItems = [];
-                    scope.itemsPerPage = 5;
+                    scope.itemsPerPage = 10;
                     scope.pagedItems = [];
                     scope.currentPage = 0;
                     scope.Sort = {
                         column: '',
                         descending: false
                     };
+
+                    angular.element('.ui.dropdown').dropdown();
 
                     scope.changeSorting = function(column) {
                         var sort = scope.Sort;
