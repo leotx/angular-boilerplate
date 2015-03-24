@@ -1,0 +1,30 @@
+<form class="ui form well">
+    <table class="ui celled table">
+        <thead>
+        <tr>
+            <th ng-repeat="column in columns">
+                <a ng-click="changeSorting(column.value)">
+                    {{column.name}}
+                    <i ng-show="Sort.column == '{{column.value}}'"
+                       ng-class="{'caret up icon': !Sort.descending, 'caret down icon': Sort.descending}">
+                    </i>
+                </a>
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="data in data|orderBy:Sort.column:Sort.descending">
+            <td ng-repeat="column in $parent.columns" ng-bind="data.{{column.value}}"></td>
+        </tr>
+        </tbody>
+        <tfoot class="full-width">
+        <tr>
+            <th colspan="{{columns.length}}">
+                <div class="ui right floated small primary labeled icon button">
+                    <i class="user icon"></i> Add User
+                </div>
+            </th>
+        </tr>
+        </tfoot>
+    </table>
+</form>
