@@ -4,7 +4,11 @@
         $routeProvider
             .when('/home', {
                 templateUrl: 'dist/templates/home.html',
-                controller: 'HomeController'
+                controller: 'homeController'
+            })
+            .when('/terceiros', {
+                templateUrl: 'dist/templates/terceiros.html',
+                controller: 'terceiroController'
             })
             .otherwise({
                 redirectTo: '/home'

@@ -1,11 +1,11 @@
 (function () {
     "use strict";
-    function services($http) {
+    function service($http) {
       var serviceRouteConstant = '/';
       return {
           default: {
         }
       };
     }
-    angular.module("app.services").factory("Services", services);
+    angular.module("app.services").factory("homeService", ['$http', service]);
 })();
