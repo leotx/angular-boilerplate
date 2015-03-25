@@ -1,10 +1,11 @@
 (function () {
     "use strict";
 
-    function gridDirective($filter) {
+    function gridDirective($filter, $timeout) {
 
         var defObject = {
             templateUrl: "dist/templates/directives/dx-grid.html",
+            restrict: 'E',
             scope:    {
                 data:   '=',
                 columns: '=',
@@ -23,7 +24,9 @@
                     descending: false
                 };
 
-                angular.element('.ui.dropdown').dropdown();
+                $timeout(function(){
+                    angular.element('.ui.dropdown').dropdown();
+                }, 0);
 
                 scope.changeSorting = function(column) {
                     var sort = scope.Sort;
@@ -115,5 +118,5 @@
         return defObject;
     }
 
-    angular.module("app.directives").directive('directiveGrid', ["$filter", gridDirective]);
+    angular.module("app.directives").directive('directiveGrid', ["$filter", "$timeout", gridDirective]);
 })();
