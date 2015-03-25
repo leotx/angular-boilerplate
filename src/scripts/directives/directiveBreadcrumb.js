@@ -1,26 +1,25 @@
 (function () {
     "use strict";
     angular.module("app.directives")
-        .directive('directiveBreadcrumb', ['$location', function($location) {
+        .directive('directiveBreadcrumb', ['$location', '$rootScope', function($location, $rootScope) {
             return {
                 templateUrl: "dist/templates/directives/dx-breadcrumb.html",
                 link: function ($scope) {
                     var breadcrumb = [
-                        {
-                            page: '/home', title: "Home", order: 0
-                        }
+                        { page: '/home', title: "Home", order: 0 },
+                        { page: '/terceiros', title: "Terceiros", order: 0 }
                     ];
 
-                    var fullPath = $location.path();
-                    var rootPath = fullPath.split('/')[1];
+                    function loadScope(){
+                        var fullPath = $location.path();
+                        var rootPath = fullPath.split('/')[1];
+                        var filterBreadcrumb = angular.copy(breadcrumb);
 
-                    var currentPage = breadcrumb.filter(function(item){
-                        return fullPath == item.page;
-                    });
+                        var currentPage = breadcrumb.filter(function(item){
+                            return fullPath == item.page;
+                        });
 
-                    if (currentPage && currentPage.length > 0)
-                    {
-                        $scope.Breadcrumbs = breadcrumb.filter(function(item){
+                        $scope.Breadcrumbs = filterBreadcrumb.filter(function(item){
                             var itemRootPath =  item.page.split('/')[1];
                             if (item.page == currentPage[0].page){
                                 $scope.CurrentBreadcrumb = item;
@@ -29,6 +28,10 @@
                             return rootPath == itemRootPath && item.order < currentPage[0].order;
                         });
                     }
+
+                    $rootScope.$on("$routeChangeStart", loadScope);
+
+                    loadScope();
                 }
             };
         }]);

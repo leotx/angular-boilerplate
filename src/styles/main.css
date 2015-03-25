@@ -2,8 +2,8 @@
     white-space: nowrap;
     width:40px !important;
     height: 100%;
-    -webkit-transition: width 1s;
-    transition: width 1s;
+    -webkit-transition: width 0.5s;
+    transition: width 0.5s;
     border-radius: 0 !important;
     z-index: 102;
     position: relative;
@@ -21,6 +21,14 @@
 .dx-menu:hover .text-menu {
     transition: ease-in-out opacity 0.25s 0.1s;
     opacity: 1 !important;
+}
+
+.dx-menu .search {
+    display: none !important;
+}
+
+.dx-menu:hover .search {
+    display: block !important;
 }
 
 .text-menu.title  {
@@ -105,13 +113,13 @@
 
 .expand-animate{
     max-height: 200px;
-    transition: ease-in max-height 1s;
+    transition: ease-in max-height 0.5s;
     overflow: hidden;
 }
 
 .collapse-animate{
     max-height : 0;
-    transition: ease-out max-height 1s;
+    transition: ease-out max-height 0.5s;
     overflow: hidden;
 }
 
