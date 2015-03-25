@@ -7,6 +7,7 @@ var htmlmin = require('gulp-htmlmin');
 var connect = require('gulp-connect');
 var inject = require('gulp-inject');
 var imagemin = require('gulp-imagemin');
+var ngAnnotate = require('gulp-ng-annotate');
 
 var WATCH_MODE = 'watch';
 var RUN_MODE = 'run';
@@ -15,6 +16,7 @@ var injectMode = 'src'
 
 gulp.task('js', function(){
   return gulp.src('src/scripts/**/*.js')
+    .pipe(ngAnnotate())
     .pipe(jshint())
     .pipe(jshint.reporter('default'))
     .pipe(concat('all.min.js'))

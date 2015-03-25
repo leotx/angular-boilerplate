@@ -42,5 +42,5 @@
             console.log('Working!');
         };
     }
-    angular.module("app.controllers").controller("HomeController", ["$scope", homeController]);
+    angular.module("app.controllers").controller("HomeController", homeController);
 })();
