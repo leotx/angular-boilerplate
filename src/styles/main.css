@@ -157,6 +157,10 @@ li.active-page{
     height: 40px !important;
 }
 
+div .container-pagination {
+    display: inline;
+}
+
 hr.faded {
     clear: both;
     float: none;
