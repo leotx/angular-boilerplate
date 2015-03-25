@@ -18,18 +18,17 @@
                 startFrom: 0,
                 syncFunction: dataManager.SyncData,
                 dataManager: dataManager,
-                cancel: function () {},
-
+                cancel: function () {}
             };
 
             var firstStep = {
-                template: '/dist/templates/views/wizard.FirstStep.html',
+                template: '/dist/templates/views/wizard/wizard.FirstStep.html',
                 controller: 'WizardFirstStepController',
                 title: 'First Step'
             };
 
             var secondStep = {
-                template: '/dist/templates/views/wizard.SecondStep.html',
+                template: '/dist/templates/views/wizard/wizard.SecondStep.html',
                 controller: 'WizardSecondStepController',
                 title: 'Second Step'
             };
